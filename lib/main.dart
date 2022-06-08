@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
 import 'package:web_admin/controllers/menu_controller.dart';
+import 'package:web_admin/controllers/navigation_controller.dart';
 import 'layout.dart';
 
 void main() {
-  Get.put(MenuController);
+  Get.put(MenuController());
+  Get.put(NavigationController());
   runApp(MyApp());
 }
 
