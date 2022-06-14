@@ -7,14 +7,14 @@ const int customScreenSize = 1100;
 
 class ResponsiveWidget extends StatelessWidget {
   final Widget largeScreen;
-  final Widget mediumScreen;
-  final Widget smallScreen;
+  final Widget? mediumScreen;
+  final Widget? smallScreen;
   final Widget customScreen;
   const ResponsiveWidget(
       {Key? key,
       required this.largeScreen,
-      required this.mediumScreen,
-      required this.smallScreen,
+      this.mediumScreen,
+      this.smallScreen,
       required this.customScreen})
       : super(key: key);
 
