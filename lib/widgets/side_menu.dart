@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:web_admin/constants/controllers.dart';
 import 'package:web_admin/constants/style.dart';
-import 'package:web_admin/controllers/navigation_controller.dart';
 import 'package:web_admin/helpers/responsiveness.dart';
 import 'package:web_admin/routing/routes.dart';
 import 'package:web_admin/widgets/custom_text.dart';
@@ -66,7 +65,7 @@ class SideMenu extends StatelessWidget {
                       if (!menuController.isActive(item.name)) {
                         menuController.changeActiveItemTo(item.name);
                         if (ResponsiveWidget.isSmallScreen(context)) Get.back();
-                        // NavigationController.navigateTo(item.route);
+                        navigationController.navigateTo(item.route);
                       }
                     }))
                 .toList(),

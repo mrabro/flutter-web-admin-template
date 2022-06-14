@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
             scaffoldBackgroundColor: Colors.white,
             textTheme: GoogleFonts.mulishTextTheme(Theme.of(context).textTheme)
                 .apply(bodyColor: Colors.black),
-            pageTransitionsTheme: PageTransitionsTheme(builders: {
+            pageTransitionsTheme: const PageTransitionsTheme(builders: {
               TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
               TargetPlatform.android: FadeUpwardsPageTransitionsBuilder()
             }),

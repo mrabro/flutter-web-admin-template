@@ -7,7 +7,7 @@ class SideMenuItem extends StatelessWidget {
   final String itemName;
   final VoidCallback? onTap;
 
-  const SideMenuItem({Key? key, required this.itemName, @required this.onTap})
+  const SideMenuItem({Key? key, required this.itemName, this.onTap})
       : super(key: key);
 
   @override
