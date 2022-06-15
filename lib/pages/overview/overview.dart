@@ -5,6 +5,8 @@ import 'package:web_admin/helpers/responsiveness.dart';
 import 'package:web_admin/pages/overview/widgets/overview_cards_large.dart';
 import 'package:web_admin/pages/overview/widgets/overview_cards_medium.dart';
 import 'package:web_admin/pages/overview/widgets/overview_cards_small.dart';
+import 'package:web_admin/pages/overview/widgets/revenue_section_large.dart';
+import 'package:web_admin/pages/overview/widgets/revenue_section_small.dart';
 // import 'package:web_admin/helpers/responsiveness.dart';
 // import 'package:web_admin/constants/controllers.dart';
 // import 'package:web_admin/pages/overview/widgets/available_drivers_table.dart';
@@ -47,6 +49,10 @@ class OverViewPage extends StatelessWidget {
                 const OverviewCardsLargeScreen()
             else
               const OverviewCardsSmallScreen(),
+            if (ResponsiveWidget.isSmallScreen(context))
+              RevenueSectionSmall()
+            else
+              RevenueSectionLarge()
           ],
         ))
       ],
